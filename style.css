@@ -338,3 +338,72 @@ a {
   color: var(--clr-text-light);
   margin-top: 0.25rem;
 }
+
+/* ===================================
+   MENU HIGHLIGHTS
+   =================================== */
+.menu {
+  padding: var(--section-padding);
+  background: var(--clr-bg-alt);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+
+.menu__card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.menu__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.menu__card-image-wrapper {
+  overflow: hidden;
+  height: 200px;
+}
+
+.menu__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu__card:hover .menu__card-image {
+  transform: scale(1.08);
+}
+
+.menu__card-body {
+  padding: 1.5rem;
+}
+
+.menu__card-title {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--clr-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.menu__card-desc {
+  font-size: 0.9rem;
+  color: var(--clr-text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.menu__card-price {
+  font-family: var(--ff-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+}

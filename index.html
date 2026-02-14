@@ -1,14 +1,51 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My landing page</title>
-    <!-- CHANGE THESE VALUES -->
+    <title>Bonjour Cafe — Specialty Coffee in Chișinău</title>
+    <meta name="description" content="Bonjour Cafe — your cozy corner for specialty coffee, fresh pastries, and warm vibes in the heart of Chișinău." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ADD YOUR CODE HERE -->
+    <!-- ===== NAVIGATION ===== -->
+    <header class="header" id="top">
+      <nav class="nav container">
+        <a href="#top" class="nav__logo">Bonjour<span>Cafe</span></a>
+
+        <input type="checkbox" id="nav-toggle" class="nav__checkbox" />
+        <label for="nav-toggle" class="nav__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <ul class="nav__menu">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#menu" class="nav__link">Menu</a></li>
+          <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li><a href="#contact" class="nav__link nav__cta">Visit Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <p class="hero__subtitle">Welcome to</p>
+        <h1 class="hero__title">Bonjour Cafe</h1>
+        <p class="hero__text">Specialty coffee, fresh pastries &amp; warm vibes<br />in the heart of Chișinău</p>
+        <div class="hero__buttons">
+          <a href="#menu" class="btn btn--primary">Explore Menu</a>
+          <a href="#contact" class="btn btn--secondary">Find Us</a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

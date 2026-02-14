@@ -23,11 +23,27 @@ Bonjour Cafe is a warm and welcoming café offering hand-crafted specialty coffe
 
 ## Live Demo
 
-🔗 [View Live Demo](#) *(link to be added after deployment)*
+🔗 [View Live Demo](https://drive.google.com/file/d/1ZEP0nfu1fEJY0mfJn-OcwQEJ2jYC5Fkw/view?usp=sharing)
 
 ## Screenshots
 
-*(screenshots to be added)*
+### Welcome
+![Welcome section](screenshots/welcome.png)
+
+### Our Story
+![Our Story section](screenshots/our-story.png)
+
+### Our Menu
+![Our Menu section](screenshots/our-menu.png)
+
+### Reviews
+![Reviews section](screenshots/reviews.png)
+
+### Visit Us
+![Visit Us section](screenshots/visit-us.png)
+
+### Secret Code & Footer
+![Secret Code and Footer](screenshots/secret-code-and-footer.png)
 
 ## Getting Started
 
@@ -40,7 +56,3 @@ python3 -m http.server 8000
 # Using Node.js
 npx serve .
 ```
-
-## Author
-
-Alexei — FAF, TUM

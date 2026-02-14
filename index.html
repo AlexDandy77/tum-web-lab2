@@ -28,7 +28,6 @@
           <li><a href="#about" class="nav__link">About</a></li>
           <li><a href="#menu" class="nav__link">Menu</a></li>
           <li><a href="#testimonials" class="nav__link">Reviews</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
           <li><a href="#contact" class="nav__link nav__cta">Visit Us</a></li>
         </ul>
       </nav>
@@ -40,10 +39,10 @@
       <div class="hero__content container">
         <p class="hero__subtitle">Welcome to</p>
         <h1 class="hero__title">Bonjour Cafe</h1>
-        <p class="hero__text">Specialty coffee, fresh pastries &amp; warm vibes<br />in the heart of Chișinău</p>
+        <p class="hero__text">Specialty coffee, fresh pastries &amp; warm vibes<br />near all famous places of Chișinău</p>
         <div class="hero__buttons">
           <a href="#menu" class="btn btn--primary">Explore Menu</a>
-          <a href="#contact" class="btn btn--secondary">Find Us</a>
+          <a href="#contact" class="btn btn--secondary">Visit Us</a>
         </div>
       </div>
     </section>
@@ -53,34 +52,35 @@
       <div class="container about__grid">
         <div class="about__image-wrapper">
           <img
-            src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=800&q=80"
-            alt="Inside Bonjour Cafe — cozy interior with warm lighting"
+            src="img/our-story.webp"
+            alt="Bonjour Cafe team preparing specialty coffee"
             class="about__image"
           />
         </div>
         <div class="about__text">
           <h2 class="section-title" style="text-align:left;">Our Story</h2>
           <p class="about__description">
-            Nestled in the heart of Chișinău, <strong>Bonjour Cafe</strong> was born from a simple
-            love for great coffee and genuine hospitality. Since opening our doors, we have been
-            committed to sourcing the finest single-origin beans and crafting each cup with care.
+            <strong>Bonjour Cafe</strong> started with a simple idea — bring people together over
+            a great cup of coffee. What began as a small stand in Chișinău's Central Park has
+            grown into six cozy locations across the city, each one carrying the same warmth and
+            love for quality that we started with.
           </p>
           <p class="about__description">
-            Our cozy space is designed for everyone — whether you're catching up with friends,
-            working on your next big idea, or simply savoring a quiet moment. We believe every
-            cup tells a story, and we'd love to be part of yours.
+            We source our beans directly from trusted farmers, roast them locally, and train every
+            barista to craft each drink with precision and care. From your morning espresso to a
+            lazy weekend latte — every cup at Bonjour is made to brighten your day.
           </p>
           <div class="about__stats">
             <div class="about__stat">
-              <span class="about__stat-number">5+</span>
-              <span class="about__stat-label">Years of coffee love</span>
+              <span class="about__stat-number">6</span>
+              <span class="about__stat-label">Locations in Chișinău</span>
             </div>
             <div class="about__stat">
-              <span class="about__stat-number">12k+</span>
+              <span class="about__stat-number">15k+</span>
               <span class="about__stat-label">Happy customers</span>
             </div>
             <div class="about__stat">
-              <span class="about__stat-number">20+</span>
+              <span class="about__stat-number">25+</span>
               <span class="about__stat-label">Unique drinks</span>
             </div>
           </div>
@@ -220,62 +220,94 @@
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ===== CONTACT / LOCATIONS ===== -->
     <section class="contact" id="contact">
       <div class="container">
         <h2 class="section-title">Visit Us</h2>
-        <p class="section-subtitle">We'd love to see you! Drop by for a coffee or send us a message.</p>
+        <p class="section-subtitle">Find your nearest Bonjour Cafe across Chișinău. Open daily 7:00 — 23:00.</p>
 
-        <div class="contact__grid">
-          <!-- Contact Info -->
-          <div class="contact__info">
-            <div class="contact__info-item">
-              <span class="contact__icon">📍</span>
-              <div>
-                <h3 class="contact__info-title">Address</h3>
-                <p>Strada Ștefan cel Mare 128,<br />Chișinău, Moldova</p>
-              </div>
+        <div class="locations__grid">
+          <!-- Location 1 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/center.webp" alt="Bonjour Cafe at Stephen the Great Central Park" class="location__image" />
             </div>
-            <div class="contact__info-item">
-              <span class="contact__icon">🕐</span>
-              <div>
-                <h3 class="contact__info-title">Hours</h3>
-                <p>Mon — Fri: 7:30 — 21:00<br />Sat — Sun: 9:00 — 22:00</p>
-              </div>
+            <div class="location__body">
+              <h3 class="location__name">Parcul Central "Ștefan cel Mare"</h3>
+              <p class="location__address">📍 Center</p>
             </div>
-            <div class="contact__info-item">
-              <span class="contact__icon">📞</span>
-              <div>
-                <h3 class="contact__info-title">Phone</h3>
-                <p>+373 22 123 456</p>
-              </div>
-            </div>
-            <div class="contact__info-item">
-              <span class="contact__icon">✉️</span>
-              <div>
-                <h3 class="contact__info-title">Email</h3>
-                <p>hello@bonjourcafe.md</p>
-              </div>
-            </div>
-          </div>
+          </article>
 
-          <!-- Contact Form -->
-          <form class="contact__form" action="#" method="post">
-            <div class="form__group">
-              <label for="name" class="form__label">Your Name</label>
-              <input type="text" id="name" name="name" class="form__input" placeholder="e.g. Maria" required />
+          <!-- Location 2 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/cathedral.webp" alt="Bonjour Cafe at Cathedral Park" class="location__image" />
             </div>
-            <div class="form__group">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" name="email" class="form__input" placeholder="maria@email.com" required />
+            <div class="location__body">
+              <h3 class="location__name">Parcul Catedralei</h3>
+              <p class="location__address">📍 Center</p>
             </div>
-            <div class="form__group">
-              <label for="message" class="form__label">Message</label>
-              <textarea id="message" name="message" class="form__input form__textarea" rows="5" placeholder="How can we help you?" required></textarea>
+          </article>
+
+          <!-- Location 3 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/valea-morilor.webp" alt="Bonjour Cafe at Valea Morilor Lake" class="location__image" />
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-          </form>
+            <div class="location__body">
+              <h3 class="location__name">Lacul Valea Morilor</h3>
+              <p class="location__address">📍 Buiucani</p>
+            </div>
+          </article>
+
+          <!-- Location 4 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/aluenlul.webp" alt="Bonjour Cafe at Alunelul Park" class="location__image" />
+            </div>
+            <div class="location__body">
+              <h3 class="location__name">Parcul Alunelul</h3>
+              <p class="location__address">📍 Buiucani</p>
+            </div>
+          </article>
+
+          <!-- Location 5 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/la-izvor.webp" alt="Bonjour Cafe at La Izvor Park" class="location__image" />
+            </div>
+            <div class="location__body">
+              <h3 class="location__name">Parcul La Izvor</h3>
+              <p class="location__address">📍 Sculeanca</p>
+            </div>
+          </article>
+
+          <!-- Location 6 -->
+          <article class="location__card">
+            <div class="location__image-wrapper">
+              <img src="img/cuza-voda.webp" alt="Bonjour Cafe at Cuza Voda Park" class="location__image" />
+            </div>
+            <div class="location__body">
+              <h3 class="location__name">Parcul Cuza Vodă</h3>
+              <p class="location__address">📍 Botanica</p>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
+
+
+    <!-- ===== PROMO CTA ===== -->
+    <section class="promo" id="promo">
+      <div class="promo__overlay"></div>
+      <div class="container promo__content">
+        <h2 class="promo__title">Get 15% Off Your Next Order</h2>
+        <p class="promo__text">
+          Just say the secret phrase to your barista when ordering:
+        </p>
+        <p class="promo__phrase">"Bonjour, un café!"</p>
+        <p class="promo__note">Valid at any of our locations in the period from February, 10 to March, 10.</p>
+        <a href="#contact" class="btn btn--primary">Find a Location</a>
       </div>
     </section>
 
@@ -284,7 +316,7 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <a href="#top" class="nav__logo">Bonjour<span>Cafe</span></a>
-          <p class="footer__tagline">Specialty coffee in the heart of Chișinău.</p>
+          <p class="footer__tagline">Specialty coffee in every corner of Chișinău.</p>
         </div>
 
         <div class="footer__links">
@@ -293,16 +325,16 @@
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Locations</a></li>
           </ul>
         </div>
 
         <div class="footer__social">
           <h4 class="footer__heading">Follow Us</h4>
           <div class="footer__social-links">
-            <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">Facebook</a>
-            <a href="#" class="footer__social-link" aria-label="TikTok">TikTok</a>
+            <a href="https://www.instagram.com/bonjour.cafe.md/?hl=en" class="footer__social-link" target="_blank" aria-label="Instagram">Instagram</a>
+            <a href="https://www.facebook.com/bonjour.cafe.md/" class="footer__social-link" target="_blank" aria-label="Facebook">Facebook</a>
+            <a href="https://www.tiktok.com/@bonjourcafe.md" class="footer__social-link" target="_blank" aria-label="TikTok">TikTok</a>
           </div>
         </div>
       </div>

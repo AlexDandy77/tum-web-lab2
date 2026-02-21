@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -46,6 +47,15 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== MOBILE WELCOME BANNER (mobile only) ===== -->
+    <div class="mobile-banner">
+      <div class="container">
+        <p class="mobile-banner__text">
+          🌟 <strong>Fun fact:</strong> We offer a selection of coffee beans from over 20 different countries!
+        </p>
+      </div>
+    </div>
 
     <!-- ===== ABOUT ===== -->
     <section class="about" id="about">
@@ -343,5 +353,56 @@
         <p>&copy; 2026 Bonjour Cafe. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- ===== COFFEE MASCOT (Clippy-style) ===== -->
+    <div class="mascot" id="mascot" aria-label="Coffee cup mascot">
+      <div class="mascot__bubble">
+        <p>Hey there! ☕<br />Find a secret phrase somewhere on the page for 15% discount!</p>
+      </div>
+      <div class="mascot__character">
+        <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="mascot__svg">
+          <!-- Steam -->
+          <g class="mascot__steam">
+            <path d="M40 28 Q42 18 38 8" fill="none" stroke="#c4a882" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+            <path d="M55 25 Q57 12 53 2" fill="none" stroke="#c4a882" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M70 28 Q72 18 68 8" fill="none" stroke="#c4a882" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+          </g>
+          <!-- Cup body -->
+          <rect x="20" y="35" width="70" height="75" rx="12" fill="#6f4e37"/>
+          <!-- Coffee surface -->
+          <ellipse cx="55" cy="50" rx="30" ry="8" fill="#4a3425"/>
+          <ellipse cx="55" cy="48" rx="28" ry="6" fill="#8B6544"/>
+          <!-- Latte art (heart) -->
+          <path d="M55 45 Q50 40 48 43 Q46 46 55 51 Q64 46 62 43 Q60 40 55 45Z" fill="#f0dbb4" opacity="0.7"/>
+          <!-- Cup handle -->
+          <path d="M90 55 Q108 55 108 75 Q108 95 90 95" fill="none" stroke="#6f4e37" stroke-width="8" stroke-linecap="round"/>
+          <!-- Eyes -->
+          <circle cx="42" cy="75" r="5" fill="#faf7f2"/>
+          <circle cx="68" cy="75" r="5" fill="#faf7f2"/>
+          <circle cx="43" cy="76" r="2.5" fill="#2c2420"/>
+          <circle cx="69" cy="76" r="2.5" fill="#2c2420"/>
+          <!-- Eye shine -->
+          <circle cx="44" cy="74" r="1" fill="#ffffff"/>
+          <circle cx="70" cy="74" r="1" fill="#ffffff"/>
+          <!-- Smile -->
+          <path d="M44 87 Q55 97 66 87" fill="none" stroke="#faf7f2" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Blush -->
+          <ellipse cx="36" cy="85" rx="5" ry="3" fill="#e8a0a0" opacity="0.5"/>
+          <ellipse cx="74" cy="85" rx="5" ry="3" fill="#e8a0a0" opacity="0.5"/>
+          <!-- Cup rim highlight -->
+          <rect x="22" y="35" width="66" height="4" rx="2" fill="#8B6544" opacity="0.5"/>
+          <!-- Cup base -->
+          <rect x="30" y="110" width="50" height="8" rx="4" fill="#5a3d28"/>
+          <!-- Saucer -->
+          <ellipse cx="55" cy="122" rx="42" ry="8" fill="#d4a762"/>
+          <ellipse cx="55" cy="120" rx="38" ry="6" fill="#e8c88a"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ===== MOBILE STICKY CTA (mobile only) ===== -->
+    <div class="mobile-cta">
+      <a href="#contact" class="mobile-cta__btn">☕ Find a Cafe Near You</a>
+    </div>
   </body>
 </html>

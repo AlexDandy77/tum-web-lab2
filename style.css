@@ -2,6 +2,43 @@
    Bonjour Cafe — Main Stylesheet
    =================================== */
 
+/* ---------- PicoCSS Overrides ---------- */
+/* We use PicoCSS classless for semantic form/button styling
+   but override its layout, colors, and typography with our theme */
+:root {
+  --pico-font-family: 'Inter', -apple-system, sans-serif;
+  --pico-font-size: 100%;
+  --pico-border-radius: 8px;
+  --pico-primary: #6f4e37;
+  --pico-primary-hover: #4a3425;
+  --pico-background-color: #faf7f2;
+  --pico-color: #2c2420;
+}
+
+/* Prevent Pico from constraining our layout */
+body > header,
+body > main,
+body > footer,
+body > section {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+article {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* Prevent Pico nav styles from overriding ours */
+nav, nav ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------- Custom Properties ---------- */
 :root {
   /* Colors */

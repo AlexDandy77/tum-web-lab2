@@ -765,6 +765,57 @@ a {
 }
 
 /* ===================================
+   MOBILE-ONLY ELEMENTS
+   =================================== */
+
+/* Mobile sticky CTA bar — hidden on desktop */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--clr-primary-dark);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-cta__btn {
+  display: block;
+  text-align: center;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+
+.mobile-cta__btn:hover {
+  background: var(--clr-accent-light);
+}
+
+/* Mobile welcome banner — hidden on desktop */
+.mobile-banner {
+  display: none;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.mobile-banner__text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.mobile-banner__text strong {
+  color: var(--clr-accent);
+}
+
+/* ===================================
    RESPONSIVE — Tablet (≤ 992px)
    =================================== */
 @media (max-width: 992px) {
@@ -1025,6 +1076,20 @@ a {
   .footer__inner {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  /* Add padding at bottom for sticky CTA bar */
+  .footer {
+    padding-bottom: 5rem;
+  }
+
+  /* Show mobile-only elements */
+  .mobile-cta {
+    display: block;
+  }
+
+  .mobile-banner {
+    display: block;
   }
 }
 

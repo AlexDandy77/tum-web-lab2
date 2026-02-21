@@ -8,18 +8,21 @@ Bonjour Cafe is a warm and welcoming café offering hand-crafted specialty coffe
 
 ## Features
 
-- **Responsive design** — looks great on desktop, tablet, and mobile
+- **Responsive design** — three breakpoints (992px / 768px / 480px) for desktop, tablet, and mobile
 - **Smooth navigation** — sticky navbar with anchor links to all sections
 - **CSS-only mobile menu** — hamburger toggle without JavaScript
 - **Call to action** — prominent "Explore Menu" and "Visit Us" buttons
-- **6 sections**: Hero, About, Menu Highlights, Testimonials, Contact, Footer
+- **Mobile-only elements** — sticky bottom CTA bar and welcome banner visible only on small screens
+- **Animated mascot** — cute SVG coffee cup character that slides in after 3 seconds, bounces continuously, and shows a speech bubble on hover
+- **7 sections**: Hero, About, Menu Highlights, Testimonials, Locations, Promo CTA, Footer
 
 ## Tech Stack
 
-- Vanilla HTML5
-- Vanilla CSS3 (custom properties, grid, flexbox)
+- HTML5 (semantic markup)
+- CSS3 (custom properties, grid, flexbox, keyframe animations)
+- [PicoCSS](https://picocss.com/) classless — lightweight CSS framework for base styling
 - Google Fonts (Playfair Display + Inter)
-- No JavaScript frameworks
+- No JavaScript
 
 ## Live Demo
 

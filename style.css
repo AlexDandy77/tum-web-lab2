@@ -39,6 +39,40 @@ nav, nav ul {
   padding: 0;
 }
 
+/* Prevent Pico from styling our hidden checkbox & hamburger label */
+.nav__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.nav__hamburger {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove Pico list-style from nav and footer lists */
+.nav__menu,
+.footer__links ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav__menu li,
+.footer__links ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------- Custom Properties ---------- */
 :root {
   /* Colors */
@@ -241,11 +275,11 @@ a {
 
 /* Hamburger (hidden on desktop) */
 .nav__checkbox {
-  display: none;
+  display: none !important;
 }
 
 .nav__hamburger {
-  display: none;
+  display: none !important;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -1021,7 +1055,7 @@ a {
 
   /* Mobile nav */
   .nav__hamburger {
-    display: flex;
+    display: flex !important;
   }
 
   .nav {

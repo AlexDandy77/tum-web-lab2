@@ -765,6 +765,127 @@ a {
 }
 
 /* ===================================
+   MASCOT (Clippy-style fixed corner)
+   =================================== */
+
+.mascot {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  cursor: pointer;
+
+  /* entrance animation with 3-second delay */
+  opacity: 0;
+  transform: translateY(60px) scale(0.6);
+  animation: mascotEntrance 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 3s forwards;
+}
+
+@keyframes mascotEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.05);
+  }
+  80% {
+    transform: translateY(4px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.mascot__character {
+  width: 90px;
+  height: auto;
+  animation: mascotBounce 3s ease-in-out infinite;
+  animation-delay: 4s; /* starts after entrance */
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.mascot:hover .mascot__character {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+@keyframes mascotBounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-8px) rotate(2deg); }
+  50% { transform: translateY(-12px); }
+  70% { transform: translateY(-6px) rotate(-2deg); }
+}
+
+.mascot__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Steam animation */
+.mascot__steam path {
+  animation: steamRise 2.5s ease-in-out infinite;
+}
+.mascot__steam path:nth-child(2) { animation-delay: 0.4s; }
+.mascot__steam path:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes steamRise {
+  0%   { opacity: 0; transform: translateY(4px); }
+  50%  { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Speech bubble — hover only */
+.mascot__bubble {
+  position: absolute;
+  bottom: 110%;
+  right: 0;
+  width: 220px;
+  background: var(--clr-bg);
+  border: 2px solid var(--clr-accent);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--clr-text);
+
+  /* hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  pointer-events: none;
+}
+
+/* speech bubble tail */
+.mascot__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--clr-accent);
+}
+
+.mascot:hover .mascot__bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mascot__bubble p {
+  margin: 0;
+}
+
+/* ===================================
    MOBILE-ONLY ELEMENTS
    =================================== */
 
@@ -1090,6 +1211,20 @@ a {
 
   .mobile-banner {
     display: block;
+  }
+
+  /* Mascot — smaller on mobile, above CTA bar */
+  .mascot {
+    bottom: 80px;
+    right: 12px;
+  }
+  .mascot__character {
+    width: 68px;
+  }
+  .mascot__bubble {
+    width: 180px;
+    font-size: 0.78rem;
+    right: -8px;
   }
 }
 

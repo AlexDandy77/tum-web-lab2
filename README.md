@@ -1,4 +1,4 @@
-# Bonjour Cafe ☕
+# Bonjour Cafe - Lab 2☕
 
 A landing page for **Bonjour Cafe** — a cozy specialty coffee shop located in the heart of Chișinău, Moldova.
 

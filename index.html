@@ -8,90 +8,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee:       { DEFAULT: '#6f4e37', dark: '#4a3425', light: '#a0795c' },
+              accent:       { DEFAULT: '#d4a762', light: '#f0dbb4' },
+              cream:        { DEFAULT: '#faf7f2', alt: '#f1ebe0' },
+              dark:         '#1a1210',
+              'text-main':  '#2c2420',
+              'text-light': '#6b5e56',
+            },
+            fontFamily: {
+              heading: ['Playfair Display', 'Georgia', 'serif'],
+              body:    ['Inter', '-apple-system', 'sans-serif'],
+            },
+            borderRadius: {
+              card: '12px',
+            },
+          },
+        },
+      }
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- ===== NAVIGATION ===== -->
-    <header class="header" id="top">
-      <nav class="nav container">
-        <a href="#top" class="nav__logo">Bonjour<span>Cafe</span></a>
 
-        <input type="checkbox" id="nav-toggle" class="nav__checkbox" />
-        <label for="nav-toggle" class="nav__hamburger">
+  <body class="font-body text-text-main bg-cream leading-relaxed">
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="fixed top-0 left-0 w-full z-[1000] bg-dark/85 backdrop-blur-[10px] transition-colors duration-300" id="top">
+      <nav class="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-[4.5rem]">
+        <a href="#top" class="font-heading text-[1.6rem] font-bold text-white tracking-wide">Bonjour<span class="text-accent">Cafe</span></a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+        <label for="nav-toggle" class="nav-hamburger">
           <span></span>
           <span></span>
           <span></span>
         </label>
 
-        <ul class="nav__menu">
-          <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#menu" class="nav__link">Menu</a></li>
-          <li><a href="#testimonials" class="nav__link">Reviews</a></li>
-          <li><a href="#contact" class="nav__link nav__cta">Visit Us</a></li>
+        <ul class="nav-menu flex items-center gap-8 list-none">
+          <li><a href="#about" class="nav-link text-white/85 text-[0.95rem] font-medium relative py-1 hover:text-white transition-colors duration-300">About</a></li>
+          <li><a href="#menu" class="nav-link text-white/85 text-[0.95rem] font-medium relative py-1 hover:text-white transition-colors duration-300">Menu</a></li>
+          <li><a href="#testimonials" class="nav-link text-white/85 text-[0.95rem] font-medium relative py-1 hover:text-white transition-colors duration-300">Reviews</a></li>
+          <li><a href="#contact" class="bg-accent text-dark px-5 py-2 rounded-lg font-semibold hover:bg-coffee-light hover:text-white transition-all duration-300">Visit Us</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-      <div class="hero__overlay"></div>
-      <div class="hero__content container">
-        <p class="hero__subtitle">Welcome to</p>
-        <h1 class="hero__title">Bonjour Cafe</h1>
-        <p class="hero__text">Specialty coffee, fresh pastries &amp; warm vibes<br />near all famous places of Chișinău</p>
-        <div class="hero__buttons">
-          <a href="#menu" class="btn btn--primary">Explore Menu</a>
-          <a href="#contact" class="btn btn--secondary">Visit Us</a>
+    <section class="hero-bg relative min-h-screen flex items-center justify-center text-white" id="hero">
+      <div class="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/50 to-dark/80"></div>
+      <div class="relative z-10 text-center max-w-[1200px] mx-auto px-6 py-8">
+        <p class="font-body text-[1.15rem] font-medium tracking-[3px] uppercase text-accent mb-3">Welcome to</p>
+        <h1 class="font-heading text-[4.5rem] font-bold leading-[1.1] mb-5 max-md:text-[2.5rem] max-lg:text-[3.2rem]">Bonjour Cafe</h1>
+        <p class="text-[1.2rem] leading-relaxed text-white/85 mb-10">Specialty coffee, fresh pastries &amp; warm vibes<br />near all famous places of Chișinău</p>
+        <div class="flex gap-4 justify-center flex-wrap max-md:flex-col max-md:items-center">
+          <a href="#menu" class="inline-block px-8 py-3.5 rounded-lg font-semibold bg-accent text-dark border-2 border-accent hover:bg-coffee hover:text-white hover:border-coffee transition-all duration-300 max-md:w-full max-md:max-w-[280px] text-center">Explore Menu</a>
+          <a href="#contact" class="inline-block px-8 py-3.5 rounded-lg font-semibold bg-transparent text-white border-2 border-white hover:bg-white hover:text-coffee-dark transition-all duration-300 max-md:w-full max-md:max-w-[280px] text-center">Visit Us</a>
         </div>
       </div>
     </section>
 
     <!-- ===== MOBILE WELCOME BANNER (mobile only) ===== -->
-    <div class="mobile-banner">
-      <div class="container">
-        <p class="mobile-banner__text">
-          🌟 <strong>Fun fact:</strong> We offer a selection of coffee beans from over 20 different countries!
+    <div class="hidden max-md:block bg-coffee text-white text-center py-4">
+      <div class="max-w-[1200px] mx-auto px-5">
+        <p class="text-[0.9rem] leading-normal">
+          🌟 <strong class="text-accent">Fun fact:</strong> We offer a selection of coffee beans from over 20 different countries!
         </p>
       </div>
     </div>
 
     <!-- ===== ABOUT ===== -->
-    <section class="about" id="about">
-      <div class="container about__grid">
-        <div class="about__image-wrapper">
+    <section class="py-24 max-md:py-14 bg-cream" id="about">
+      <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="overflow-hidden">
           <img
             src="img/our-story.webp"
             alt="Bonjour Cafe team preparing specialty coffee"
-            class="about__image"
+            class="w-full rounded-card shadow-[0_20px_50px_rgba(0,0,0,0.1)] max-lg:max-h-[400px] object-cover"
           />
         </div>
-        <div class="about__text">
-          <h2 class="section-title" style="text-align:left;">Our Story</h2>
-          <p class="about__description">
+        <div>
+          <h2 class="font-heading text-[2.5rem] max-md:text-[1.85rem] font-bold text-coffee-dark mb-4 lg:text-left text-center">Our Story</h2>
+          <p class="text-text-light text-[1.05rem] max-md:text-[0.95rem] leading-[1.8] mb-5">
             <strong>Bonjour Cafe</strong> started with a simple idea — bring people together over
             a great cup of coffee. What began as a small stand in Chișinău's Central Park has
             grown into six cozy locations across the city, each one carrying the same warmth and
             love for quality that we started with.
           </p>
-          <p class="about__description">
+          <p class="text-text-light text-[1.05rem] max-md:text-[0.95rem] leading-[1.8] mb-5">
             We source our beans directly from trusted farmers, roast them locally, and train every
             barista to craft each drink with precision and care. From your morning espresso to a
             lazy weekend latte — every cup at Bonjour is made to brighten your day.
           </p>
-          <div class="about__stats">
-            <div class="about__stat">
-              <span class="about__stat-number">6</span>
-              <span class="about__stat-label">Locations in Chișinău</span>
+          <div class="flex gap-10 max-md:gap-6 mt-8 flex-wrap max-[480px]:flex-col max-[480px]:gap-4">
+            <div class="flex flex-col">
+              <span class="font-heading text-[2rem] max-md:text-[1.6rem] font-bold text-coffee">6</span>
+              <span class="text-[0.85rem] text-text-light mt-1">Locations in Chișinău</span>
             </div>
-            <div class="about__stat">
-              <span class="about__stat-number">15k+</span>
-              <span class="about__stat-label">Happy customers</span>
+            <div class="flex flex-col">
+              <span class="font-heading text-[2rem] max-md:text-[1.6rem] font-bold text-coffee">15k+</span>
+              <span class="text-[0.85rem] text-text-light mt-1">Happy customers</span>
             </div>
-            <div class="about__stat">
-              <span class="about__stat-number">25+</span>
-              <span class="about__stat-label">Unique drinks</span>
+            <div class="flex flex-col">
+              <span class="font-heading text-[2rem] max-md:text-[1.6rem] font-bold text-coffee">25+</span>
+              <span class="text-[0.85rem] text-text-light mt-1">Unique drinks</span>
             </div>
           </div>
         </div>
@@ -99,73 +124,57 @@
     </section>
 
     <!-- ===== MENU HIGHLIGHTS ===== -->
-    <section class="menu" id="menu">
-      <div class="container">
-        <h2 class="section-title">Our Menu</h2>
-        <p class="section-subtitle">Hand-crafted drinks and freshly baked goods — made with love every single day.</p>
+    <section class="py-24 max-md:py-14 bg-cream-alt" id="menu">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <h2 class="font-heading text-[2.5rem] max-md:text-[1.85rem] font-bold text-coffee-dark text-center mb-4">Our Menu</h2>
+        <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">Hand-crafted drinks and freshly baked goods — made with love every single day.</p>
 
-        <div class="menu__grid">
+        <div class="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 max-md:gap-5">
           <!-- Card 1 -->
-          <article class="menu__card">
-            <div class="menu__card-image-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
-                alt="Cappuccino with latte art"
-                class="menu__card-image"
-              />
+          <article class="menu-card bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300 max-md:flex max-md:flex-row">
+            <div class="overflow-hidden h-[200px] max-md:w-[120px] max-md:min-h-[120px] max-md:h-auto max-md:shrink-0 max-[480px]:w-[100px] max-[480px]:min-h-[100px]">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Cappuccino with latte art" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
             </div>
-            <div class="menu__card-body">
-              <h3 class="menu__card-title">Classic Cappuccino</h3>
-              <p class="menu__card-desc">Rich espresso topped with velvety steamed milk foam — our signature cup.</p>
-              <span class="menu__card-price">45 MDL</span>
+            <div class="p-6 max-md:p-4 max-md:flex max-md:flex-col max-md:justify-center">
+              <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">Classic Cappuccino</h3>
+              <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">Rich espresso topped with velvety steamed milk foam — our signature cup.</p>
+              <span class="font-heading text-[1.15rem] font-bold text-accent">45 MDL</span>
             </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="menu__card">
-            <div class="menu__card-image-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
-                alt="Iced latte with caramel"
-                class="menu__card-image"
-              />
+          <article class="menu-card bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300 max-md:flex max-md:flex-row">
+            <div class="overflow-hidden h-[200px] max-md:w-[120px] max-md:min-h-[120px] max-md:h-auto max-md:shrink-0 max-[480px]:w-[100px] max-[480px]:min-h-[100px]">
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80" alt="Iced latte with caramel" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
             </div>
-            <div class="menu__card-body">
-              <h3 class="menu__card-title">Caramel Iced Latte</h3>
-              <p class="menu__card-desc">Smooth cold brew blended with house-made caramel and oat milk.</p>
-              <span class="menu__card-price">55 MDL</span>
+            <div class="p-6 max-md:p-4 max-md:flex max-md:flex-col max-md:justify-center">
+              <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">Caramel Iced Latte</h3>
+              <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">Smooth cold brew blended with house-made caramel and oat milk.</p>
+              <span class="font-heading text-[1.15rem] font-bold text-accent">55 MDL</span>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="menu__card">
-            <div class="menu__card-image-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
-                alt="Flat white coffee"
-                class="menu__card-image"
-              />
+          <article class="menu-card bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300 max-md:flex max-md:flex-row">
+            <div class="overflow-hidden h-[200px] max-md:w-[120px] max-md:min-h-[120px] max-md:h-auto max-md:shrink-0 max-[480px]:w-[100px] max-[480px]:min-h-[100px]">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Flat white coffee" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
             </div>
-            <div class="menu__card-body">
-              <h3 class="menu__card-title">Velvet Flat White</h3>
-              <p class="menu__card-desc">Double ristretto with silky micro-foam — bold yet smooth.</p>
-              <span class="menu__card-price">50 MDL</span>
+            <div class="p-6 max-md:p-4 max-md:flex max-md:flex-col max-md:justify-center">
+              <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">Velvet Flat White</h3>
+              <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">Double ristretto with silky micro-foam — bold yet smooth.</p>
+              <span class="font-heading text-[1.15rem] font-bold text-accent">50 MDL</span>
             </div>
           </article>
 
           <!-- Card 4 -->
-          <article class="menu__card">
-            <div class="menu__card-image-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80"
-                alt="Fresh croissant"
-                class="menu__card-image"
-              />
+          <article class="menu-card bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300 max-md:flex max-md:flex-row">
+            <div class="overflow-hidden h-[200px] max-md:w-[120px] max-md:min-h-[120px] max-md:h-auto max-md:shrink-0 max-[480px]:w-[100px] max-[480px]:min-h-[100px]">
+              <img src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80" alt="Fresh croissant" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
             </div>
-            <div class="menu__card-body">
-              <h3 class="menu__card-title">Butter Croissant</h3>
-              <p class="menu__card-desc">Flaky, golden, baked fresh every morning — perfect with any coffee.</p>
-              <span class="menu__card-price">35 MDL</span>
+            <div class="p-6 max-md:p-4 max-md:flex max-md:flex-col max-md:justify-center">
+              <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">Butter Croissant</h3>
+              <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">Flaky, golden, baked fresh every morning — perfect with any coffee.</p>
+              <span class="font-heading text-[1.15rem] font-bold text-accent">35 MDL</span>
             </div>
           </article>
         </div>
@@ -173,56 +182,56 @@
     </section>
 
     <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <h2 class="section-title">What Our Guests Say</h2>
-        <p class="section-subtitle">Don't just take our word for it — hear from the people who make our mornings brighter.</p>
+    <section class="py-24 max-md:py-14 bg-cream" id="testimonials">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <h2 class="font-heading text-[2.5rem] max-md:text-[1.85rem] font-bold text-coffee-dark text-center mb-4">What Our Guests Say</h2>
+        <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">Don't just take our word for it — hear from the people who make our mornings brighter.</p>
 
-        <div class="testimonials__grid">
+        <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8">
           <!-- Testimonial 1 -->
-          <blockquote class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial__text">
+          <blockquote class="bg-white rounded-card p-8 max-md:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-accent text-[1.2rem] tracking-[2px] mb-4">★★★★★</div>
+            <p class="text-[1rem] leading-[1.7] text-text-light italic grow mb-6">
               "The best cappuccino in Chișinău, hands down! The atmosphere is so warm and welcoming.
               I come here every morning before work."
             </p>
-            <footer class="testimonial__author">
-              <div class="testimonial__avatar">A</div>
+            <footer class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-coffee text-white flex items-center justify-center font-bold">A</div>
               <div>
-                <cite class="testimonial__name">Ana Popescu</cite>
-                <span class="testimonial__role">Regular guest</span>
+                <cite class="block font-semibold not-italic text-text-main text-[0.95rem]">Ana Popescu</cite>
+                <span class="text-[0.8rem] text-text-light">Regular guest</span>
               </div>
             </footer>
           </blockquote>
 
           <!-- Testimonial 2 -->
-          <blockquote class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial__text">
+          <blockquote class="bg-white rounded-card p-8 max-md:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-accent text-[1.2rem] tracking-[2px] mb-4">★★★★★</div>
+            <p class="text-[1rem] leading-[1.7] text-text-light italic grow mb-6">
               "Perfect spot for remote work — great Wi-Fi, comfy seats, and the caramel latte is
               absolutely addictive. Highly recommend!"
             </p>
-            <footer class="testimonial__author">
-              <div class="testimonial__avatar">M</div>
+            <footer class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-coffee text-white flex items-center justify-center font-bold">M</div>
               <div>
-                <cite class="testimonial__name">Mihai Rusu</cite>
-                <span class="testimonial__role">Freelancer</span>
+                <cite class="block font-semibold not-italic text-text-main text-[0.95rem]">Mihai Rusu</cite>
+                <span class="text-[0.8rem] text-text-light">Freelancer</span>
               </div>
             </footer>
           </blockquote>
 
           <!-- Testimonial 3 -->
-          <blockquote class="testimonial__card">
-            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial__text">
+          <blockquote class="bg-white rounded-card p-8 max-md:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col hover:-translate-y-1 transition-transform duration-300 max-lg:col-span-2 max-lg:max-w-[500px] max-lg:mx-auto max-md:col-span-1 max-md:max-w-none">
+            <div class="text-accent text-[1.2rem] tracking-[2px] mb-4">★★★★★</div>
+            <p class="text-[1rem] leading-[1.7] text-text-light italic grow mb-6">
               "The croissants are unreal — crispy outside, buttery inside. Combined with their
               flat white, it's the perfect breakfast combo."
             </p>
-            <footer class="testimonial__author">
-              <div class="testimonial__avatar">E</div>
+            <footer class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-coffee text-white flex items-center justify-center font-bold">E</div>
               <div>
-                <cite class="testimonial__name">Elena Ciobanu</cite>
-                <span class="testimonial__role">Food blogger</span>
+                <cite class="block font-semibold not-italic text-text-main text-[0.95rem]">Elena Ciobanu</cite>
+                <span class="text-[0.8rem] text-text-light">Food blogger</span>
               </div>
             </footer>
           </blockquote>
@@ -231,125 +240,124 @@
     </section>
 
     <!-- ===== CONTACT / LOCATIONS ===== -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">Visit Us</h2>
-        <p class="section-subtitle">Find your nearest Bonjour Cafe across Chișinău. Open daily 7:00 — 23:00.</p>
+    <section class="py-24 max-md:py-14 bg-cream-alt" id="contact">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <h2 class="font-heading text-[2.5rem] max-md:text-[1.85rem] font-bold text-coffee-dark text-center mb-4">Visit Us</h2>
+        <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">Find your nearest Bonjour Cafe across Chișinău. Open daily 7:00 — 23:00.</p>
 
-        <div class="locations__grid">
+        <div class="grid grid-cols-3 max-lg:grid-cols-2 max-[480px]:grid-cols-1 gap-8 max-md:gap-4">
           <!-- Location 1 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/center.webp" alt="Bonjour Cafe at Stephen the Great Central Park" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/center.webp" alt="Bonjour Cafe at Stephen the Great Central Park" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Parcul Central "Ștefan cel Mare"</h3>
-              <p class="location__address">📍 Center</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Parcul Central "Ștefan cel Mare"</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Center</p>
             </div>
           </article>
 
           <!-- Location 2 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/cathedral.webp" alt="Bonjour Cafe at Cathedral Park" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/cathedral.webp" alt="Bonjour Cafe at Cathedral Park" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Parcul Catedralei</h3>
-              <p class="location__address">📍 Center</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Parcul Catedralei</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Center</p>
             </div>
           </article>
 
           <!-- Location 3 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/valea-morilor.webp" alt="Bonjour Cafe at Valea Morilor Lake" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/valea-morilor.webp" alt="Bonjour Cafe at Valea Morilor Lake" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Lacul Valea Morilor</h3>
-              <p class="location__address">📍 Buiucani</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Lacul Valea Morilor</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Buiucani</p>
             </div>
           </article>
 
           <!-- Location 4 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/aluenlul.webp" alt="Bonjour Cafe at Alunelul Park" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/aluenlul.webp" alt="Bonjour Cafe at Alunelul Park" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Parcul Alunelul</h3>
-              <p class="location__address">📍 Buiucani</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Parcul Alunelul</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Buiucani</p>
             </div>
           </article>
 
           <!-- Location 5 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/la-izvor.webp" alt="Bonjour Cafe at La Izvor Park" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/la-izvor.webp" alt="Bonjour Cafe at La Izvor Park" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Parcul La Izvor</h3>
-              <p class="location__address">📍 Sculeanca</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Parcul La Izvor</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Sculeanca</p>
             </div>
           </article>
 
           <!-- Location 6 -->
-          <article class="location__card">
-            <div class="location__image-wrapper">
-              <img src="img/cuza-voda.webp" alt="Bonjour Cafe at Cuza Voda Park" class="location__image" />
+          <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="img/cuza-voda.webp" alt="Bonjour Cafe at Cuza Voda Park" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <div class="location__body">
-              <h3 class="location__name">Parcul Cuza Vodă</h3>
-              <p class="location__address">📍 Botanica</p>
+            <div class="p-5 max-md:p-3.5">
+              <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">Parcul Cuza Vodă</h3>
+              <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 Botanica</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-
     <!-- ===== PROMO CTA ===== -->
-    <section class="promo" id="promo">
-      <div class="promo__overlay"></div>
-      <div class="container promo__content">
-        <h2 class="promo__title">Get 15% Off Your Next Order</h2>
-        <p class="promo__text">
+    <section class="promo-bg relative py-20 max-md:py-14 text-white text-center" id="promo">
+      <div class="absolute inset-0 bg-dark/[0.82]"></div>
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6">
+        <h2 class="font-heading text-[2.75rem] max-md:text-[1.85rem] max-[480px]:text-[1.5rem] font-bold mb-4">Get 15% Off Your Next Order</h2>
+        <p class="text-[1.15rem] max-md:text-[1rem] text-white/80 mb-6">
           Just say the secret phrase to your barista when ordering:
         </p>
-        <p class="promo__phrase">"Bonjour, un café!"</p>
-        <p class="promo__note">Valid at any of our locations in the period from February, 10 to March, 10.</p>
-        <a href="#contact" class="btn btn--primary">Find a Location</a>
+        <p class="font-heading text-[2rem] max-md:text-[1.3rem] max-[480px]:text-[1.1rem] font-bold italic text-accent bg-white/[0.08] inline-block px-8 max-md:px-5 max-[480px]:px-4 py-3 max-md:py-2.5 rounded-lg border-2 border-dashed border-accent mb-5">"Bonjour, un café!"</p>
+        <p class="text-[0.9rem] text-white/50 mb-8">Valid at any of our locations in the period from February, 10 to March, 10.</p>
+        <a href="#contact" class="inline-block px-8 py-3.5 rounded-lg font-semibold bg-accent text-dark border-2 border-accent hover:bg-coffee hover:text-white hover:border-coffee transition-all duration-300 max-[480px]:text-[0.9rem]">Find a Location</a>
       </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__brand">
-          <a href="#top" class="nav__logo">Bonjour<span>Cafe</span></a>
-          <p class="footer__tagline">Specialty coffee in every corner of Chișinău.</p>
+    <footer class="bg-dark text-white/70 pt-16 max-md:pb-20">
+      <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-[2fr_1fr_1fr] max-lg:grid-cols-2 max-md:grid-cols-1 gap-12 max-lg:gap-8 pb-12 border-b border-white/10">
+        <div class="max-lg:col-span-2 max-md:col-span-1">
+          <a href="#top" class="font-heading text-[1.6rem] font-bold text-white tracking-wide">Bonjour<span class="text-accent">Cafe</span></a>
+          <p class="mt-3 text-[0.95rem] leading-relaxed">Specialty coffee in every corner of Chișinău.</p>
         </div>
 
-        <div class="footer__links">
-          <h4 class="footer__heading">Quick Links</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#contact">Locations</a></li>
+        <div>
+          <h4 class="font-heading font-bold text-[1.1rem] text-white mb-4">Quick Links</h4>
+          <ul class="flex flex-col gap-2 list-none p-0">
+            <li><a href="#about" class="text-[0.9rem] hover:text-accent transition-colors duration-300">About</a></li>
+            <li><a href="#menu" class="text-[0.9rem] hover:text-accent transition-colors duration-300">Menu</a></li>
+            <li><a href="#testimonials" class="text-[0.9rem] hover:text-accent transition-colors duration-300">Reviews</a></li>
+            <li><a href="#contact" class="text-[0.9rem] hover:text-accent transition-colors duration-300">Locations</a></li>
           </ul>
         </div>
 
-        <div class="footer__social">
-          <h4 class="footer__heading">Follow Us</h4>
-          <div class="footer__social-links">
-            <a href="https://www.instagram.com/bonjour.cafe.md/?hl=en" class="footer__social-link" target="_blank" aria-label="Instagram">Instagram</a>
-            <a href="https://www.facebook.com/bonjour.cafe.md/" class="footer__social-link" target="_blank" aria-label="Facebook">Facebook</a>
-            <a href="https://www.tiktok.com/@bonjourcafe.md" class="footer__social-link" target="_blank" aria-label="TikTok">TikTok</a>
+        <div>
+          <h4 class="font-heading font-bold text-[1.1rem] text-white mb-4">Follow Us</h4>
+          <div class="flex flex-col gap-2">
+            <a href="https://www.instagram.com/bonjour.cafe.md/?hl=en" class="text-[0.9rem] hover:text-accent transition-colors duration-300" target="_blank" aria-label="Instagram">Instagram</a>
+            <a href="https://www.facebook.com/bonjour.cafe.md/" class="text-[0.9rem] hover:text-accent transition-colors duration-300" target="_blank" aria-label="Facebook">Facebook</a>
+            <a href="https://www.tiktok.com/@bonjourcafe.md" class="text-[0.9rem] hover:text-accent transition-colors duration-300" target="_blank" aria-label="TikTok">TikTok</a>
           </div>
         </div>
       </div>
 
-      <div class="footer__bottom container">
+      <div class="text-center py-6 text-[0.85rem] text-white/40 max-w-[1200px] mx-auto px-6">
         <p>&copy; 2026 Bonjour Cafe. All rights reserved.</p>
       </div>
     </footer>
@@ -360,7 +368,7 @@
         <p>Hey there! ☕<br />Find a secret phrase somewhere on the page for 15% discount!</p>
       </div>
       <div class="mascot__character">
-        <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="mascot__svg">
+        <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
           <!-- Steam -->
           <g class="mascot__steam">
             <path d="M40 28 Q42 18 38 8" fill="none" stroke="#c4a882" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
@@ -401,8 +409,8 @@
     </div>
 
     <!-- ===== MOBILE STICKY CTA (mobile only) ===== -->
-    <div class="mobile-cta">
-      <a href="#contact" class="mobile-cta__btn">☕ Find a Cafe Near You</a>
+    <div class="hidden max-md:block fixed bottom-0 left-0 w-full z-[999] bg-coffee-dark p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
+      <a href="#contact" class="block text-center bg-accent text-dark font-bold text-[1rem] py-3.5 rounded-lg hover:bg-accent-light transition-colors duration-300">☕ Find a Cafe Near You</a>
     </div>
   </body>
 </html>

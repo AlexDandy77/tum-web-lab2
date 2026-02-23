@@ -19,10 +19,10 @@ Bonjour Cafe is a warm and welcoming café offering hand-crafted specialty coffe
 ## Tech Stack
 
 - HTML5 (semantic markup)
-- CSS3 (custom properties, grid, flexbox, keyframe animations)
-- [PicoCSS](https://picocss.com/) classless — lightweight CSS framework for base styling
+- [Tailwind CSS](https://tailwindcss.com/) via CDN — utility-first CSS framework for all layout, spacing, typography, and responsive design
+- CSS3 (keyframe animations, pseudo-elements, checkbox hack — in companion `style.css`)
 - Google Fonts (Playfair Display + Inter)
-- No JavaScript
+- No JavaScript (except Tailwind CDN runtime)
 
 ## Live Demo
 

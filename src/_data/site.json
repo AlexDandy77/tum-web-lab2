@@ -1,4 +1,22 @@
 {
+  "nav": {
+    "links": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Menu",
+        "href": "#menu"
+      },
+      {
+        "label": "Reviews",
+        "href": "#testimonials"
+      }
+    ],
+    "ctaLabel": "Visit Us",
+    "ctaHref": "#contact"
+  },
   "meta": {
     "title": "Bonjour Cafe - Specialty Coffee in Chisinau",
     "description": "Bonjour Cafe - your cozy corner for specialty coffee, fresh pastries, and warm vibes in the heart of Chisinau."
@@ -7,31 +25,8 @@
     "name": "Bonjour",
     "highlight": "Cafe"
   },
-  "nav": {
-    "links": [
-      { "label": "About", "href": "#about" },
-      { "label": "Menu", "href": "#menu" },
-      { "label": "Reviews", "href": "#testimonials" }
-    ],
-    "ctaLabel": "Visit Us",
-    "ctaHref": "#contact"
-  },
-  "hero": {
-    "subtitle": "Welcome to",
-    "title": "Bonjour Cafe",
-    "text": "Specialty coffee, fresh pastries & warm vibes<br />near all famous places of Chisinau",
-    "primaryButton": {
-      "label": "Explore Menu",
-      "href": "#menu"
-    },
-    "secondaryButton": {
-      "label": "Visit Us",
-      "href": "#contact"
-    }
-  },
-  "mobileBanner": {
-    "highlight": "Fun fact:",
-    "text": "We offer a selection of coffee beans from over 20 different countries!"
+  "mascot": {
+    "message": "Hey there! ☕<br />Find a secret phrase somewhere on the page for 15% discount!"
   },
   "about": {
     "title": "Our Story",
@@ -42,44 +37,35 @@
       "We source our beans directly from trusted farmers, roast them locally, and train every barista to craft each drink with precision and care. From your morning espresso to a lazy weekend latte - every cup at Bonjour is made to brighten your day."
     ],
     "stats": [
-      { "number": "6", "label": "Locations in Chisinau" },
-      { "number": "15k+", "label": "Happy customers" },
-      { "number": "25+", "label": "Unique drinks" }
-    ]
-  },
-  "menu": {
-    "title": "Our Menu",
-    "subtitle": "Hand-crafted drinks and freshly baked goods - made with love every single day.",
-    "items": [
       {
-        "title": "Classic Cappuccino",
-        "description": "Rich espresso topped with velvety steamed milk foam - our signature cup.",
-        "price": "45 MDL",
-        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Cappuccino with latte art"
+        "number": "6",
+        "label": "Locations in Chisinau"
       },
       {
-        "title": "Caramel Iced Latte",
-        "description": "Smooth cold brew blended with house-made caramel and oat milk.",
-        "price": "55 MDL",
-        "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Iced latte with caramel"
+        "number": "15k+",
+        "label": "Happy customers"
       },
       {
-        "title": "Velvet Flat White",
-        "description": "Double ristretto with silky micro-foam - bold yet smooth.",
-        "price": "50 MDL",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Flat white coffee"
-      },
-      {
-        "title": "Butter Croissant",
-        "description": "Flaky, golden, baked fresh every morning - perfect with any coffee.",
-        "price": "35 MDL",
-        "image": "https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Fresh croissant"
+        "number": "25+",
+        "label": "Unique drinks"
       }
     ]
+  },
+  "mobileCta": {
+    "label": "☕ Find a Cafe Near You",
+    "href": "#contact"
+  },
+  "mobileBanner": {
+    "highlight": "Fun fact:",
+    "text": "We offer a selection of coffee beans from over 20 different countries!"
+  },
+  "promo": {
+    "title": "Get 15% Off Your Next Order",
+    "text": "Just say the secret phrase to your barista when ordering:",
+    "phrase": "Bonjour, un cafe!",
+    "note": "Valid at any of our locations in the period from February, 10 to March, 10.",
+    "buttonLabel": "Find a Location",
+    "buttonHref": "#contact"
   },
   "testimonials": {
     "title": "What Our Guests Say",
@@ -105,8 +91,67 @@
         "name": "Elena Ciobanu",
         "role": "Food blogger",
         "avatar": "E"
+      },
+      {
+        "stars": "★★★★★",
+        "text": "Atmosfera bomba, all the locations are very cozy: with pleasant music and great decorations. And of course the coffee: it is superb!",
+        "name": "Alexei Pavlovschii",
+        "role": "Student",
+        "avatar": "A"
       }
     ]
+  },
+  "hero": {
+    "subtitle": "Welcome to",
+    "title": "Bonjour Cafe",
+    "text": "Specialty coffee, fresh pastries & warm vibes<br />near all famous places of Chisinau",
+    "primaryButton": {
+      "label": "Explore Menu",
+      "href": "#menu"
+    },
+    "secondaryButton": {
+      "label": "Visit Us",
+      "href": "#contact"
+    }
+  },
+  "footer": {
+    "tagline": "Specialty coffee in every corner of Chisinau.",
+    "quickLinks": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Menu",
+        "href": "#menu"
+      },
+      {
+        "label": "Reviews",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Locations",
+        "href": "#contact"
+      }
+    ],
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/bonjour.cafe.md/?hl=en",
+        "ariaLabel": "Instagram"
+      },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/bonjour.cafe.md/",
+        "ariaLabel": "Facebook"
+      },
+      {
+        "label": "TikTok",
+        "href": "https://www.tiktok.com/@bonjourcafe.md",
+        "ariaLabel": "TikTok"
+      }
+    ],
+    "copyright": "2026 Bonjour Cafe. All rights reserved."
   },
   "locations": {
     "title": "Visit Us",
@@ -150,46 +195,38 @@
       }
     ]
   },
-  "promo": {
-    "title": "Get 15% Off Your Next Order",
-    "text": "Just say the secret phrase to your barista when ordering:",
-    "phrase": "Bonjour, un cafe!",
-    "note": "Valid at any of our locations in the period from February, 10 to March, 10.",
-    "buttonLabel": "Find a Location",
-    "buttonHref": "#contact"
-  },
-  "footer": {
-    "tagline": "Specialty coffee in every corner of Chisinau.",
-    "quickLinks": [
-      { "label": "About", "href": "#about" },
-      { "label": "Menu", "href": "#menu" },
-      { "label": "Reviews", "href": "#testimonials" },
-      { "label": "Locations", "href": "#contact" }
-    ],
-    "socialLinks": [
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Hand-crafted drinks and freshly baked goods - made with love every single day.",
+    "items": [
       {
-        "label": "Instagram",
-        "href": "https://www.instagram.com/bonjour.cafe.md/?hl=en",
-        "ariaLabel": "Instagram"
+        "title": "Classic Cappuccino",
+        "description": "Rich espresso topped with velvety steamed milk foam - our signature cup.",
+        "price": "45 MDL",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Cappuccino with latte art"
       },
       {
-        "label": "Facebook",
-        "href": "https://www.facebook.com/bonjour.cafe.md/",
-        "ariaLabel": "Facebook"
+        "title": "Caramel Iced Latte",
+        "description": "Smooth cold brew blended with house-made caramel and oat milk.",
+        "price": "55 MDL",
+        "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Iced latte with caramel"
       },
       {
-        "label": "TikTok",
-        "href": "https://www.tiktok.com/@bonjourcafe.md",
-        "ariaLabel": "TikTok"
+        "title": "Velvet Flat White",
+        "description": "Double ristretto with silky micro-foam - bold yet smooth.",
+        "price": "50 MDL",
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Flat white coffee"
+      },
+      {
+        "title": "Butter Croissant",
+        "description": "Flaky, golden, baked fresh every morning - perfect with any coffee.",
+        "price": "35 MDL",
+        "image": "https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Fresh croissant"
       }
-    ],
-    "copyright": "2026 Bonjour Cafe. All rights reserved."
-  },
-  "mascot": {
-    "message": "Hey there! ☕<br />Find a secret phrase somewhere on the page for 15% discount!"
-  },
-  "mobileCta": {
-    "label": "☕ Find a Cafe Near You",
-    "href": "#contact"
+    ]
   }
 }

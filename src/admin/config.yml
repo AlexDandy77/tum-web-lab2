@@ -4,8 +4,8 @@ backend:
 
 local_backend: true
 
-media_folder: src/img/uploads
-public_folder: /img/uploads
+media_folder: src/img
+public_folder: img
 
 collections:
   - name: site

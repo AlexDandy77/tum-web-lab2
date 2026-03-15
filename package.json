@@ -1,0 +1,26 @@
+{
+  "name": "tum-web-lab2",
+  "version": "1.0.0",
+  "description": "A landing page for **Bonjour Cafe** — a cozy specialty coffee shop located in the heart of Chișinău, Moldova.",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDandy77/tum-web-lab2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlexDandy77/tum-web-lab2/issues"
+  },
+  "homepage": "https://github.com/AlexDandy77/tum-web-lab2#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

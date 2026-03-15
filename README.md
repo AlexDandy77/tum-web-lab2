@@ -1,61 +1,100 @@
 # Bonjour Cafe ☕
 
-A landing page for **Bonjour Cafe** — a cozy specialty coffee shop located in the heart of Chișinău, Moldova.
-
-## About
-
-Bonjour Cafe is a warm and welcoming café offering hand-crafted specialty coffee, freshly baked pastries, and a relaxing atmosphere for work, study, or catching up with friends.
-
-## Features
-
-- **Responsive design** — three breakpoints (992px / 768px / 480px) for desktop, tablet, and mobile
-- **Smooth navigation** — sticky navbar with anchor links to all sections
-- **CSS-only mobile menu** — hamburger toggle without JavaScript
-- **Call to action** — prominent "Explore Menu" and "Visit Us" buttons
-- **Mobile-only elements** — sticky bottom CTA bar and welcome banner visible only on small screens
-- **Animated mascot** — cute SVG coffee cup character that slides in after 3 seconds, bounces continuously, and shows a speech bubble on hover
-- **7 sections**: Hero, About, Menu Highlights, Testimonials, Locations, Promo CTA, Footer
-
-## Tech Stack
-
-- HTML5 (semantic markup)
-- [Tailwind CSS](https://tailwindcss.com/) via CDN — utility-first CSS framework for all layout, spacing, typography, and responsive design
-- CSS3 (keyframe animations, pseudo-elements, checkbox hack — in companion `style.css`)
-- Google Fonts (Playfair Display + Inter)
-- No JavaScript (except Tailwind CDN runtime)
+Bonjour Cafe landing page migrated to a **Static Site Generator** setup with a **Git-based CMS**.
 
 ## Live Demo
 
-🔗 [View Live Demo](https://drive.google.com/file/d/1ZEP0nfu1fEJY0mfJn-OcwQEJ2jYC5Fkw/view?usp=sharing)
+- Website: [https://bonjourcafe.me](https://bonjourcafe.me)
 
-## Screenshots
+## Lab 4 Stack
 
-### Welcome
-![Welcome section](screenshots/welcome.png)
+- **SSG:** [Eleventy (11ty)](https://www.11ty.dev/)
+- **Git CMS:** [Decap CMS](https://decapcms.org/)
+- **CSS framework:** [Tailwind CSS](https://tailwindcss.com/) (kept from Lab 3)
 
-### Our Story
-![Our Story section](screenshots/our-story.png)
+## What Is Editable via CMS
 
-### Our Menu
-![Our Menu section](screenshots/our-menu.png)
+Almost all homepage content is editable through Decap CMS, including:
 
-### Reviews
-![Reviews section](screenshots/reviews.png)
+- meta title and description
+- brand name and navigation links
+- hero texts and buttons
+- mobile banner text
+- about section title, image, paragraphs, and stats
+- menu cards (title, description, price, image)
+- testimonials (text, author, role, avatar)
+- locations (name, address, image)
+- promo section text and CTA
+- footer links and social links
+- mascot bubble message and mobile sticky CTA
 
-### Visit Us
-![Visit Us section](screenshots/visit-us.png)
+CMS content source file: `src/_data/site.json`
 
-### Secret Code & Footer
-![Secret Code and Footer](screenshots/secret-code-and-footer.png)
+## Project Structure
 
-## Getting Started
+```text
+.
+├── .eleventy.js
+├── package.json
+├── src/
+│   ├── _data/
+│   │   └── site.json
+│   ├── _includes/
+│   │   └── layouts/
+│   │       └── base.njk
+│   ├── admin/
+│   │   ├── config.yml
+│   │   └── index.html
+│   ├── img/
+│   ├── index.njk
+│   └── style.css
+└── _site/ (generated)
+```
 
-Simply open `index.html` in your browser, or serve it with any static file server:
+## Development
 
 ```bash
-# Using Python
-python3 -m http.server 8000
-
-# Using Node.js
-npx serve .
+npm install
+npm run dev
 ```
+
+Local site: `http://localhost:8080`
+
+Build static output:
+
+```bash
+npm run build
+```
+
+Generated site is in `_site/`.
+
+## CMS Usage (Decap)
+
+CMS admin route after running locally or deploying:
+
+- `/admin/`
+
+Config file:
+
+- `src/admin/config.yml`
+
+Notes:
+
+- `local_backend: true` is enabled for local CMS workflow.
+- Production backend is set to `git-gateway` for Netlify-compatible Git editing.
+
+## Deployment (Recommended: Netlify)
+
+To satisfy live deployment + Git CMS editing:
+
+1. Connect repo to Netlify.
+2. Build command: `npm run build`
+3. Publish directory: `_site`
+4. In Netlify, enable Identity.
+5. Enable Git Gateway.
+6. Invite users for CMS access (Identity).
+7. Open `https://<your-site>.netlify.app/admin/` to edit content.
+
+## Previous Visuals
+
+Screenshots from earlier labs are still available in `screenshots/`.

@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Bonjour Cafe - Specialty Coffee in Chisinau",
+    "description": "Bonjour Cafe - your cozy corner for specialty coffee, fresh pastries, and warm vibes in the heart of Chisinau."
+  },
+  "brand": {
+    "name": "Bonjour",
+    "highlight": "Cafe"
+  },
+  "nav": {
+    "links": [
+      { "label": "About", "href": "#about" },
+      { "label": "Menu", "href": "#menu" },
+      { "label": "Reviews", "href": "#testimonials" }
+    ],
+    "ctaLabel": "Visit Us",
+    "ctaHref": "#contact"
+  },
+  "hero": {
+    "subtitle": "Welcome to",
+    "title": "Bonjour Cafe",
+    "text": "Specialty coffee, fresh pastries & warm vibes<br />near all famous places of Chisinau",
+    "primaryButton": {
+      "label": "Explore Menu",
+      "href": "#menu"
+    },
+    "secondaryButton": {
+      "label": "Visit Us",
+      "href": "#contact"
+    }
+  },
+  "mobileBanner": {
+    "highlight": "Fun fact:",
+    "text": "We offer a selection of coffee beans from over 20 different countries!"
+  },
+  "about": {
+    "title": "Our Story",
+    "image": "img/our-story.webp",
+    "imageAlt": "Bonjour Cafe team preparing specialty coffee",
+    "paragraphs": [
+      "Bonjour Cafe started with a simple idea - bring people together over a great cup of coffee. What began as a small stand in Chisinau's Central Park has grown into six cozy locations across the city, each one carrying the same warmth and love for quality that we started with.",
+      "We source our beans directly from trusted farmers, roast them locally, and train every barista to craft each drink with precision and care. From your morning espresso to a lazy weekend latte - every cup at Bonjour is made to brighten your day."
+    ],
+    "stats": [
+      { "number": "6", "label": "Locations in Chisinau" },
+      { "number": "15k+", "label": "Happy customers" },
+      { "number": "25+", "label": "Unique drinks" }
+    ]
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Hand-crafted drinks and freshly baked goods - made with love every single day.",
+    "items": [
+      {
+        "title": "Classic Cappuccino",
+        "description": "Rich espresso topped with velvety steamed milk foam - our signature cup.",
+        "price": "45 MDL",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Cappuccino with latte art"
+      },
+      {
+        "title": "Caramel Iced Latte",
+        "description": "Smooth cold brew blended with house-made caramel and oat milk.",
+        "price": "55 MDL",
+        "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Iced latte with caramel"
+      },
+      {
+        "title": "Velvet Flat White",
+        "description": "Double ristretto with silky micro-foam - bold yet smooth.",
+        "price": "50 MDL",
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Flat white coffee"
+      },
+      {
+        "title": "Butter Croissant",
+        "description": "Flaky, golden, baked fresh every morning - perfect with any coffee.",
+        "price": "35 MDL",
+        "image": "https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80",
+        "imageAlt": "Fresh croissant"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Guests Say",
+    "subtitle": "Don't just take our word for it - hear from the people who make our mornings brighter.",
+    "items": [
+      {
+        "stars": "★★★★★",
+        "text": "The best cappuccino in Chisinau, hands down! The atmosphere is so warm and welcoming. I come here every morning before work.",
+        "name": "Ana Popescu",
+        "role": "Regular guest",
+        "avatar": "A"
+      },
+      {
+        "stars": "★★★★★",
+        "text": "Perfect spot for remote work - great Wi-Fi, comfy seats, and the caramel latte is absolutely addictive. Highly recommend!",
+        "name": "Mihai Rusu",
+        "role": "Freelancer",
+        "avatar": "M"
+      },
+      {
+        "stars": "★★★★★",
+        "text": "The croissants are unreal - crispy outside, buttery inside. Combined with their flat white, it's the perfect breakfast combo.",
+        "name": "Elena Ciobanu",
+        "role": "Food blogger",
+        "avatar": "E"
+      }
+    ]
+  },
+  "locations": {
+    "title": "Visit Us",
+    "subtitle": "Find your nearest Bonjour Cafe across Chisinau. Open daily 7:00 - 23:00.",
+    "items": [
+      {
+        "name": "Parcul Central Stefan cel Mare",
+        "address": "Center",
+        "image": "img/center.webp",
+        "imageAlt": "Bonjour Cafe at Stephen the Great Central Park"
+      },
+      {
+        "name": "Parcul Catedralei",
+        "address": "Center",
+        "image": "img/cathedral.webp",
+        "imageAlt": "Bonjour Cafe at Cathedral Park"
+      },
+      {
+        "name": "Lacul Valea Morilor",
+        "address": "Buiucani",
+        "image": "img/valea-morilor.webp",
+        "imageAlt": "Bonjour Cafe at Valea Morilor Lake"
+      },
+      {
+        "name": "Parcul Alunelul",
+        "address": "Buiucani",
+        "image": "img/aluenlul.webp",
+        "imageAlt": "Bonjour Cafe at Alunelul Park"
+      },
+      {
+        "name": "Parcul La Izvor",
+        "address": "Sculeanca",
+        "image": "img/la-izvor.webp",
+        "imageAlt": "Bonjour Cafe at La Izvor Park"
+      },
+      {
+        "name": "Parcul Cuza Voda",
+        "address": "Botanica",
+        "image": "img/cuza-voda.webp",
+        "imageAlt": "Bonjour Cafe at Cuza Voda Park"
+      }
+    ]
+  },
+  "promo": {
+    "title": "Get 15% Off Your Next Order",
+    "text": "Just say the secret phrase to your barista when ordering:",
+    "phrase": "Bonjour, un cafe!",
+    "note": "Valid at any of our locations in the period from February, 10 to March, 10.",
+    "buttonLabel": "Find a Location",
+    "buttonHref": "#contact"
+  },
+  "footer": {
+    "tagline": "Specialty coffee in every corner of Chisinau.",
+    "quickLinks": [
+      { "label": "About", "href": "#about" },
+      { "label": "Menu", "href": "#menu" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "Locations", "href": "#contact" }
+    ],
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/bonjour.cafe.md/?hl=en",
+        "ariaLabel": "Instagram"
+      },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/bonjour.cafe.md/",
+        "ariaLabel": "Facebook"
+      },
+      {
+        "label": "TikTok",
+        "href": "https://www.tiktok.com/@bonjourcafe.md",
+        "ariaLabel": "TikTok"
+      }
+    ],
+    "copyright": "2026 Bonjour Cafe. All rights reserved."
+  },
+  "mascot": {
+    "message": "Hey there! ☕<br />Find a secret phrase somewhere on the page for 15% discount!"
+  },
+  "mobileCta": {
+    "label": "☕ Find a Cafe Near You",
+    "href": "#contact"
+  }
+}

@@ -76,17 +76,19 @@ permalink: index.html
     <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">{{ site.menu.subtitle }}</p>
 
     <div class="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 max-md:gap-5">
-      {% for item in site.menu.items %}
+      {% for item in collections.menu %}
+      {% if item.data.active %}
       <article class="menu-card bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300 max-md:flex max-md:flex-row">
         <div class="overflow-hidden h-[200px] max-md:w-[120px] max-md:min-h-[120px] max-md:h-auto max-md:shrink-0 max-[480px]:w-[100px] max-[480px]:min-h-[100px]">
-          <img src="{{ item.image }}" alt="{{ item.imageAlt }}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
+          <img src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.08]" />
         </div>
         <div class="p-6 max-md:p-4 max-md:flex max-md:flex-col max-md:justify-center">
-          <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">{{ item.title }}</h3>
-          <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">{{ item.description }}</p>
-          <span class="font-heading text-[1.15rem] font-bold text-accent">{{ item.price }}</span>
+          <h3 class="font-heading text-[1.25rem] font-bold text-coffee-dark mb-2">{{ item.data.title }}</h3>
+          <p class="text-[0.9rem] text-text-light leading-relaxed mb-4">{{ item.data.description }}</p>
+          <span class="font-heading text-[1.15rem] font-bold text-accent">{{ item.data.price }}</span>
         </div>
       </article>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -98,15 +100,15 @@ permalink: index.html
     <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">{{ site.testimonials.subtitle }}</p>
 
     <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8">
-      {% for item in site.testimonials.items %}
+      {% for item in collections.testimonials %}
       <blockquote class="bg-white rounded-card p-8 max-md:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col hover:-translate-y-1 transition-transform duration-300 {% if loop.last %}max-lg:col-span-2 max-lg:max-w-[500px] max-lg:mx-auto max-md:col-span-1 max-md:max-w-none{% endif %}">
-        <div class="text-accent text-[1.2rem] tracking-[2px] mb-4">{{ item.stars }}</div>
-        <p class="text-[1rem] leading-[1.7] text-text-light italic grow mb-6">"{{ item.text }}"</p>
+        <div class="text-accent text-[1.2rem] tracking-[2px] mb-4">{{ item.data.stars }}</div>
+        <p class="text-[1rem] leading-[1.7] text-text-light italic grow mb-6">"{{ item.content | safe | replace('<p>', '') | replace('</p>', '') | trim }}"</p>
         <footer class="flex items-center gap-3">
-          <div class="w-11 h-11 rounded-full bg-coffee text-white flex items-center justify-center font-bold">{{ item.avatar }}</div>
+          <div class="w-11 h-11 rounded-full bg-coffee text-white flex items-center justify-center font-bold">{{ item.data.avatar }}</div>
           <div>
-            <cite class="block font-semibold not-italic text-text-main text-[0.95rem]">{{ item.name }}</cite>
-            <span class="text-[0.8rem] text-text-light">{{ item.role }}</span>
+            <cite class="block font-semibold not-italic text-text-main text-[0.95rem]">{{ item.data.name }}</cite>
+            <span class="text-[0.8rem] text-text-light">{{ item.data.role }}</span>
           </div>
         </footer>
       </blockquote>
@@ -121,14 +123,14 @@ permalink: index.html
     <p class="text-center text-text-light text-[1.1rem] max-md:text-[1rem] max-w-[750px] mx-auto mb-12 max-md:mb-8">{{ site.locations.subtitle }}</p>
 
     <div class="grid grid-cols-3 max-lg:grid-cols-2 max-[480px]:grid-cols-1 gap-8 max-md:gap-4">
-      {% for location in site.locations.items %}
+      {% for location in collections.locations %}
       <article class="bg-white rounded-card overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all duration-300">
         <div class="w-full aspect-[4/3] overflow-hidden">
-          <img src="/{{ location.image }}" alt="{{ location.imageAlt }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+          <img src="/{{ location.data.image }}" alt="{{ location.data.imageAlt }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
         </div>
         <div class="p-5 max-md:p-3.5">
-          <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">{{ location.name }}</h3>
-          <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 {{ location.address }}</p>
+          <h3 class="font-heading text-[1.25rem] max-md:text-[1.05rem] font-bold text-coffee-dark mb-1.5">{{ location.data.name }}</h3>
+          <p class="text-[0.95rem] max-md:text-[0.85rem] text-text-light">📍 {{ location.data.address }}</p>
         </div>
       </article>
       {% endfor %}

@@ -69,30 +69,7 @@
   },
   "testimonials": {
     "title": "What Our Guests Say",
-    "subtitle": "Don't just take our word for it - hear from the people who make our mornings brighter.",
-    "items": [
-      {
-        "stars": "★★★★★",
-        "text": "The best cappuccino in Chisinau, hands down! The atmosphere is so warm and welcoming. I come here every morning before work.",
-        "name": "Ana Popescu",
-        "role": "Regular guest",
-        "avatar": "A"
-      },
-      {
-        "stars": "★★★★★",
-        "text": "Perfect spot for remote work - great Wi-Fi, comfy seats, and the caramel latte is absolutely addictive. Highly recommend!",
-        "name": "Mihai Rusu",
-        "role": "Freelancer",
-        "avatar": "M"
-      },
-      {
-        "stars": "★★★★★",
-        "text": "The croissants are unreal - crispy outside, buttery inside. Combined with their flat white, it's the perfect breakfast combo.",
-        "name": "Elena Ciobanu",
-        "role": "Food blogger",
-        "avatar": "E"
-      }
-    ]
+    "subtitle": "Don't just take our word for it - hear from the people who make our mornings brighter."
   },
   "hero": {
     "subtitle": "Welcome to",
@@ -148,78 +125,10 @@
   },
   "locations": {
     "title": "Visit Us",
-    "subtitle": "Find your nearest Bonjour Cafe across Chisinau. Open daily 7:00 - 23:00.",
-    "items": [
-      {
-        "name": "Parcul Central Stefan cel Mare",
-        "address": "Center",
-        "image": "img/center.webp",
-        "imageAlt": "Bonjour Cafe at Stephen the Great Central Park"
-      },
-      {
-        "name": "Parcul Catedralei",
-        "address": "Center",
-        "image": "img/cathedral.webp",
-        "imageAlt": "Bonjour Cafe at Cathedral Park"
-      },
-      {
-        "name": "Lacul Valea Morilor",
-        "address": "Buiucani",
-        "image": "img/valea-morilor.webp",
-        "imageAlt": "Bonjour Cafe at Valea Morilor Lake"
-      },
-      {
-        "name": "Parcul Alunelul",
-        "address": "Buiucani",
-        "image": "img/aluenlul.webp",
-        "imageAlt": "Bonjour Cafe at Alunelul Park"
-      },
-      {
-        "name": "Parcul La Izvor",
-        "address": "Sculeanca",
-        "image": "img/la-izvor.webp",
-        "imageAlt": "Bonjour Cafe at La Izvor Park"
-      },
-      {
-        "name": "Parcul Cuza Voda",
-        "address": "Botanica",
-        "image": "img/cuza-voda.webp",
-        "imageAlt": "Bonjour Cafe at Cuza Voda Park"
-      }
-    ]
+    "subtitle": "Find your nearest Bonjour Cafe across Chisinau. Open daily 7:00 - 23:00."
   },
   "menu": {
     "title": "Our Menu",
-    "subtitle": "Hand-crafted drinks and freshly baked goods - made with love every single day.",
-    "items": [
-      {
-        "title": "Classic Cappuccino",
-        "description": "Rich espresso topped with velvety steamed milk foam - our signature cup.",
-        "price": "45 MDL",
-        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Cappuccino with latte art"
-      },
-      {
-        "title": "Caramel Iced Latte",
-        "description": "Smooth cold brew blended with house-made caramel and oat milk.",
-        "price": "55 MDL",
-        "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Iced latte with caramel"
-      },
-      {
-        "title": "Velvet Flat White",
-        "description": "Double ristretto with silky micro-foam - bold yet smooth.",
-        "price": "50 MDL",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Flat white coffee"
-      },
-      {
-        "title": "Butter Croissant",
-        "description": "Flaky, golden, baked fresh every morning - perfect with any coffee.",
-        "price": "35 MDL",
-        "image": "https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=600&q=80",
-        "imageAlt": "Fresh croissant"
-      }
-    ]
+    "subtitle": "Hand-crafted drinks and freshly baked goods - made with love every single day."
   }
 }
